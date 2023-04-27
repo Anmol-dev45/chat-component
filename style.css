@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+
+:root {
+    --gray-200: hsl(206, 6%, 79%);
+    --gray-300: hsl(270, 7%, 64%);
+
+    --violet-400: hsl(276, 100%, 81%);
+    --violet-600: hsl(276, 55%, 52%);
+    --violet-700: hsl(271, 15%, 43%);
+    --violet-900: hsl(271, 36%, 24%);
+
+    --pure-100: hsl(0, 0%, 100%);
+    --pure-300: hsl(270, 20%, 96%);
+
+    --pink-900: hsl(293, 100%, 63%);
+    --pink-800: hsl(289, 100%, 72%);
+
+    --blue-900: hsl(264, 100%, 61%);
+
+
+    --fs-400: 1rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-900: 3rem;
+    --ff-serif: 'Rubik', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+html,
+body {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--pure-300);
+}
+
+
+
+
+
+/* utility class */
+.flex {
+    display: flex;
+    gap: var(--gap)
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap)
+}
+
+.container {
+    /* margin-inline: auto; */
+    background-color: var(--pure-300);
+    width: 470px;
+    border: 1rem solid var(--pure-100);
+    border-radius: 45px;
+}
+
+.cont {
+    margin-inline: auto;
+    padding-block: 8em;
+    width: 90%;
+    max-width: 90rem;
+}
+
+.pure-text {
+    color: var(--pure-100);
+}
+
+.dark-text {
+    color: var(--violet-900);
+}
+
+.light-text {
+    color: var(--gray-300);
+}
+
+.fs-600 {
+    font-size: var(--fs-600);
+}
+
+.fs-700 {
+    font-size: var(--fs-700);
+}
+
+.fs-900 {
+    font-size: var(--fs-900);
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.ff-serif {
+    font-family: var(--ff-serif);
+}
+
+.left {
+    margin-right: auto;
+}
+
+.right {
+    margin-left: auto;
+}
+
+/* 02C3 */
+.mssg {
+    border-radius: 20px;
+    border: 0;
+    font-size: var(--fs-400);
+    max-width: 262px;
+    padding: .6rem 1rem;
+    display: inline-block;
+    font-family: var(--ff-serif);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: .001px;
+}
+
+.primary-mssg {
+    --gray-300: 270 7% 64%;
+
+
+    background-color: hsl(var(--gray-300) /.35);
+    color: var(--violet-600);
+    border-bottom-left-radius: 5px;
+}
+
+.secondary-mssg {
+    background-color: var(--pure-100);
+    color: var(--violet-700);
+    border-bottom-right-radius: 5px;
+
+}
+
+
+.btn-radio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8em 1em;
+    width: 320px;
+    background: linear-gradient(to right, var(--pink-900), var(--blue-900));
+    border-radius: 20px;
+    border-bottom-left-radius: 5px;
+}
+
+.radio {
+    border-radius: 50%;
+    border: 2px solid;
+    border-color: var(--pure-100);
+    background: transparent;
+    width: 1.5em;
+    aspect-ratio: 1;
+
+}
+
+.send-icon {
+    height: 40px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--violet-900);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send-icon::after,
+.send-icon::before {
+    /* display: inline-block; */
+    content: '';
+    position: absolute;
+    /* inset: 0 0 0 0;: */
+    height: 4px;
+    width: 14px;
+    /* display: block; */
+    background-color: var(--pure-100);
+
+}
+
+.send-icon::after {
+    transform: rotate(45deg);
+    right: 11px;
+    bottom: 20px;
+}
+
+.send-icon::before {
+    right: 11px;
+    top: 19px;
+    transform: rotate(-45deg);
+}
+
+header {
+    background: linear-gradient(to right, var(--blue-900), var(--pink-900));
+    padding: 1rem 1.8rem;
+    padding-top: 3rem;
+    border-radius: 32px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+}
+
+.profile {
+    background-image: url("images/avatar.jpg");
+    background-size: contain;
+    width: 50px;
+    aspect-ratio: 1;
+    border: 3px solid var(--pure-100);
+    border-radius: 50%;
+
+}
+
+main {
+    padding: 1.3em 1em;
+
+}
+
+.dot {
+    width: 4px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-color: var(--pure-100);
+}
+
+.mssg-box {
+    border-radius: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    background-color: var(--pure-100);
+}
+
+.mssg-box input {
+    color: var(--gray-200);
+    font-weight: 700;
+    border: 0;
+    background: transparent;
+    width: 300px;
+    outline: none;
+    font-size: 1rem;
+    padding-inline: 2rem;
+}
+
+.mssg-box input::placeholder {
+    color: var(--gray-200);
+    font-weight: 700;
+}
+
+
+.notch {
+    position: absolute;
+    top: -1rem;
+    left: 20%;
+    right: 20%;
+    /* border: 2px solid red; */
+    width: 60%;
+    padding: 1.6rem;
+    background: var(--pure-100);
+    border-radius: 50px;
+}
+
+section {
+    position: relative;
+}
+
+.ctc {
+    position: absolute;
+    height: max(1000px, 50%);
+    width: 50%;
+    background-color: var(--blue-900);
+    border-bottom-right-radius: 800px;
+}
+
+@media (min-width:550px) {
+    .cont {
+        display: flex;
+        align-items: center;
+        /* justify-content: space-between; */
+        gap: 15rem;
+        
+    }
+
+    .ctc {
+
+        width: 30%;
+    }
+    .para {
+        text-align: left;
+    }
+}
